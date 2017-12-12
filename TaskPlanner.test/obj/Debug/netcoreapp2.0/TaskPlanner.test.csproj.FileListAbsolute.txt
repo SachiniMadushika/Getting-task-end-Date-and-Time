@@ -1,0 +1,16 @@
+C:\Assignment\TaskPlanner\TaskPlanner.test\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Assignment\TaskPlanner\TaskPlanner.test\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Assignment\TaskPlanner\TaskPlanner.test\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Assignment\TaskPlanner\TaskPlanner.test\bin\Debug\netcoreapp2.0\TaskPlanner.test.deps.json
+C:\Assignment\TaskPlanner\TaskPlanner.test\bin\Debug\netcoreapp2.0\TaskPlanner.test.runtimeconfig.json
+C:\Assignment\TaskPlanner\TaskPlanner.test\bin\Debug\netcoreapp2.0\TaskPlanner.test.runtimeconfig.dev.json
+C:\Assignment\TaskPlanner\TaskPlanner.test\bin\Debug\netcoreapp2.0\TaskPlanner.test.dll
+C:\Assignment\TaskPlanner\TaskPlanner.test\bin\Debug\netcoreapp2.0\TaskPlanner.test.pdb
+C:\Assignment\TaskPlanner\TaskPlanner.test\obj\Debug\netcoreapp2.0\TaskPlanner.test.csprojResolveAssemblyReference.cache
+C:\Assignment\TaskPlanner\TaskPlanner.test\obj\Debug\netcoreapp2.0\TaskPlanner.test.csproj.CoreCompileInputs.cache
+C:\Assignment\TaskPlanner\TaskPlanner.test\obj\Debug\netcoreapp2.0\TaskPlanner.test.AssemblyInfoInputs.cache
+C:\Assignment\TaskPlanner\TaskPlanner.test\obj\Debug\netcoreapp2.0\TaskPlanner.test.AssemblyInfo.cs
+C:\Assignment\TaskPlanner\TaskPlanner.test\obj\Debug\netcoreapp2.0\TaskPlanner.test.dll
+C:\Assignment\TaskPlanner\TaskPlanner.test\obj\Debug\netcoreapp2.0\TaskPlanner.test.pdb
+C:\Assignment\TaskPlanner\TaskPlanner.test\bin\Debug\netcoreapp2.0\TaskPlanner.dll
+C:\Assignment\TaskPlanner\TaskPlanner.test\bin\Debug\netcoreapp2.0\TaskPlanner.pdb

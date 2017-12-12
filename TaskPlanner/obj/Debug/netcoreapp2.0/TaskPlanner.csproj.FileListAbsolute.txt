@@ -1,0 +1,11 @@
+C:\Assignment\TaskPlanner\TaskPlanner\bin\Debug\netcoreapp2.0\TaskPlanner.deps.json
+C:\Assignment\TaskPlanner\TaskPlanner\bin\Debug\netcoreapp2.0\TaskPlanner.runtimeconfig.json
+C:\Assignment\TaskPlanner\TaskPlanner\bin\Debug\netcoreapp2.0\TaskPlanner.runtimeconfig.dev.json
+C:\Assignment\TaskPlanner\TaskPlanner\bin\Debug\netcoreapp2.0\TaskPlanner.dll
+C:\Assignment\TaskPlanner\TaskPlanner\bin\Debug\netcoreapp2.0\TaskPlanner.pdb
+C:\Assignment\TaskPlanner\TaskPlanner\obj\Debug\netcoreapp2.0\TaskPlanner.csprojResolveAssemblyReference.cache
+C:\Assignment\TaskPlanner\TaskPlanner\obj\Debug\netcoreapp2.0\TaskPlanner.csproj.CoreCompileInputs.cache
+C:\Assignment\TaskPlanner\TaskPlanner\obj\Debug\netcoreapp2.0\TaskPlanner.AssemblyInfoInputs.cache
+C:\Assignment\TaskPlanner\TaskPlanner\obj\Debug\netcoreapp2.0\TaskPlanner.AssemblyInfo.cs
+C:\Assignment\TaskPlanner\TaskPlanner\obj\Debug\netcoreapp2.0\TaskPlanner.dll
+C:\Assignment\TaskPlanner\TaskPlanner\obj\Debug\netcoreapp2.0\TaskPlanner.pdb

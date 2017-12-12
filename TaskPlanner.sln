@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskPlanner", "TaskPlanner\TaskPlanner.csproj", "{F18726E8-6B81-4EA6-A648-5CAC10FEE490}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskPlanner.test", "TaskPlanner.test\TaskPlanner.test.csproj", "{79D06294-AE8A-4264-B05D-2ADD36C61CDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F18726E8-6B81-4EA6-A648-5CAC10FEE490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F18726E8-6B81-4EA6-A648-5CAC10FEE490}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F18726E8-6B81-4EA6-A648-5CAC10FEE490}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F18726E8-6B81-4EA6-A648-5CAC10FEE490}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79D06294-AE8A-4264-B05D-2ADD36C61CDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D06294-AE8A-4264-B05D-2ADD36C61CDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79D06294-AE8A-4264-B05D-2ADD36C61CDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79D06294-AE8A-4264-B05D-2ADD36C61CDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F570C170-4DB1-409E-8CBB-0E15A1051124}
+	EndGlobalSection
+EndGlobal
