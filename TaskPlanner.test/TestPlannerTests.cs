@@ -4,12 +4,9 @@ using TaskPlanner;
 
 namespace TaskPlanner.test
 {
-
     [TestClass]
     public class TestPlannerTests
     {
-        TestPlannerTests test = new TestPlannerTests();
-
         [TestMethod]
         public void TestMethod1()
         {
@@ -28,50 +25,86 @@ namespace TaskPlanner.test
             var endDate = new DateTime(2017, 12, 6, 10, 0, 0);
             Assert.AreEqual(actualEndDate, endDate);
         }
-        [TestMethod]
-        public void TestMethod3()
-        {
-
-
-
-        }
 
         [TestMethod]
         public void TestMethod4()
         {
             var startedDay = new DateTime(2017, 12, 6, 8, 0, 0);
             var expectedTime = new TimeSpan(12, 0, 0);
-            var FinishworkTimeDay = new DateTime(2017, 12, 6, 16, 0, 0);
+            var FinishworkTimeDay = new DateTime(2017, 12, 6, 20, 0, 0);
             var actualEndDate = startedDay.Add(expectedTime);
-            //var x = new DateTime();
-            //if (actualEndDate.CompareTo(FinishworkTimeDay) > 0) {
-            //     x= actualEndDate;
-            //}
-            //else
-            //{
-            //     x = actualEndDate.AddDays(1);
-            //}
-
-            //var expected = new DateTime(2017, 12, 7, 20, 0, 0);
-            //Assert.AreEqual(expected, x);
         }
+        [TestMethod]
+        public void OnNormalDay_PlusDaysAndHours_EndDate()
+        {
+            TaskPlanner taskPlanner = new TaskPlanner();
+            DateTime date = new DateTime(2017, 12, 4, 15, 0, 0);
+            double days = 0.5;
 
-        //[TestMethod]
-        //public void TestMethod4()
-        //{
-        //    var taskPlanner = new TaskPlanner();
-        //    taskPlanner.SetWorkdayStartAndStop(new TimeSpan(8, 0, 0), new TimeSpan(16, 0, 0));
-        //    taskPlanner.SetRecurringHoliday(new DateTime(2004, 5, 17, 0, 0, 0));
-        //    taskPlanner.SetRecurringHoliday(new DateTime(2004, 5, 24, 0, 0, 0));
-        //    taskPlanner.SetHoliday(new DateTime(2004, 5, 27, 0, 0, 0));
+            DateTime expected = new DateTime(2017, 12, 4, 12, 00, 00);
+            DateTime result=taskPlanner.GetFinishingDate(date,days);
 
-        //    var start = new DateTime(2004, 5, 24, 18, 3, 0);
-        //    double numberOfDays = -6.7470217d;
+            Assert.AreEqual(expected,result);
+        }
+        [TestMethod]
+        public void OnNormalDay_PlusOneDay_EndDate()
+        {
+            TaskPlanner taskPlanner = new TaskPlanner();
+            DateTime date = new DateTime(2017, 12, 4, 8, 0, 0);
+            double days = 1.0;
 
-        //    var actual = taskPlanner.GetTaskFinishingDate(start, numberOfDays);
-        //    var expected = new DateTime(2004, 5, 12, 10, 2, 0);
+            DateTime expected = new DateTime(2017, 12, 4, 16, 0, 0);
+            DateTime result = taskPlanner.GetFinishingDate(date, days);
 
-        //    Assert.AreEqual(expected, actual);
-        //}
+            Assert.AreEqual(expected, result);
+        }
+        [TestMethod]
+        public void OnNormalDay_PlusOneDayAndHours_EndDate()
+        {
+            TaskPlanner taskPlanner = new TaskPlanner();
+            DateTime date = new DateTime(2017, 12, 4, 8, 0, 0);
+            double days = 1.5;
+
+            DateTime expected = new DateTime(2017, 12, 5, 12, 0, 0);
+            DateTime result = taskPlanner.GetFinishingDate(date, days);
+
+            Assert.AreEqual(expected, result);
+        }
+        [TestMethod]
+        public void OnNormalDay_PlusOneDayAndHoursWithWeekend_EndDate()
+        {
+            TaskPlanner taskPlanner = new TaskPlanner();
+            DateTime date = new DateTime(2017, 12, 8, 11, 0, 0);
+            double days = 1.5;
+
+            DateTime expected = new DateTime(2017, 12, 5, 12, 0, 0);
+            DateTime result = taskPlanner.GetFinishingDate(date, days);
+
+            Assert.AreEqual(expected, result);
+        }
+        [TestMethod]
+        public void OnNormalDay_PlusAssignmentTest1_EndDate()
+        {
+            TaskPlanner taskPlanner = new TaskPlanner();
+            DateTime date = new DateTime(2017, 12, 4, 15, 7, 0);
+            double days = 0.25;
+
+            DateTime expected = new DateTime(2017, 12, 5, 9, 7, 0);
+            DateTime result = taskPlanner.GetFinishingDate(date, days);
+
+            Assert.AreEqual(expected, result);
+        }
+        [TestMethod]
+        public void OnNormalDay_PlusAssignmentTest4_EndDate()
+        {
+            TaskPlanner taskPlanner = new TaskPlanner();
+            DateTime date = new DateTime(2004, 5, 24, 8, 3, 0);
+            double days = 12.782709;
+
+            DateTime expected = new DateTime(2017, 6, 10, 14, 18, 0);
+            DateTime result = taskPlanner.GetFinishingDate(date, days);
+
+            Assert.AreEqual(expected, result);
+        }
     }
 }

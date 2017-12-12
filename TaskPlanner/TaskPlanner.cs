@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace TaskPlanner
 {
-    class TaskPlanner
+    public class TaskPlanner
     {
         TimeSpan StartworkTimeDay = new TimeSpan(8, 0, 0);
         TimeSpan FinishworkTimeDay = new TimeSpan(16, 0, 0);
-        decimal NoOfDays;
+        decimal NoOfDays = 2.5M;
         DateTime WorkdayStartTime;
 
 
@@ -15,6 +15,9 @@ namespace TaskPlanner
 
         private bool IsHoliday(DateTime date)
         {
+            Holidays.Add(new DateTime(2004, 5, 17));
+            Holidays.Add(new DateTime(2004, 5, 24));
+            Holidays.Add(new DateTime(2004, 5, 27));
             return Holidays.Contains(date);
         }
         private bool IsWeekEnd(DateTime date)
@@ -31,18 +34,18 @@ namespace TaskPlanner
             return date;
         }
 
-        private int ConvertNegativeToDays(decimal NoOfDays)
+        private int ConvertNegativeToDays(double NoOfDays)
         {
-            decimal days = Math.Ceiling(NoOfDays);
+            double days = Math.Ceiling(NoOfDays);
             int NegativeDays = (int)Math.Ceiling(days);
             return NegativeDays;
         }
-        private TimeSpan ConvertNegativeTime(decimal NoOfDays)
+        private TimeSpan ConvertNegativeTime(double NoOfDays)
         {
-            decimal days = Math.Floor(Math.Abs(NoOfDays));
-            decimal hours = (NoOfDays - days) * 8M;
-            decimal minutes = (hours - Math.Floor(hours)) * 60;
-            decimal seconds = (minutes - Math.Floor(minutes)) * 60;
+            double days = Math.Floor(Math.Abs(NoOfDays));
+            double hours = (NoOfDays - days) * 8;
+            double minutes = (hours - Math.Floor(hours)) * 60;
+            double seconds = (minutes - Math.Floor(minutes)) * 60;
             int H = (int)Math.Floor(hours);
             int M = (int)Math.Floor(minutes);
             int S = (int)Math.Floor(seconds);
@@ -50,18 +53,18 @@ namespace TaskPlanner
             return timeFormat;
         }
 
-        public int ConvertPositiveToDays(decimal NoOfDays)
+        public int ConvertPositiveToDays(double NoOfDays)
         {
-            decimal days = Math.Floor(NoOfDays);
+            double days = Math.Floor(NoOfDays);
             int PositiveDays = (int)Math.Floor(days);
             return PositiveDays;
         }
-        public TimeSpan ConvertPositiveToTime(decimal NoOfDays)
+        public TimeSpan ConvertPositiveToTime(double NoOfDays)
         {
-            decimal days = Math.Floor(NoOfDays);
-            decimal hours = (NoOfDays - days) * 8M;
-            decimal minutes = (hours - Math.Floor(hours)) * 60;
-            decimal seconds = (minutes - Math.Floor(minutes)) * 60;
+            double days = Math.Floor(NoOfDays);
+            double hours = (NoOfDays - days) * 8;
+            double minutes = (hours - Math.Floor(hours)) * 60;
+            double seconds = (minutes - Math.Floor(minutes)) * 60;
             int H = (int)Math.Floor(hours);
             int M = (int)Math.Floor(minutes);
             int S = (int)Math.Floor(seconds);
@@ -70,19 +73,23 @@ namespace TaskPlanner
             TimeSpan timeFormat = new TimeSpan(H, M, S);
             return timeFormat;
         }
-        public DateTime EndDate(DateTime WorkdayStartTime, decimal NoOfDays)
+        public DateTime GetFinishingDate(DateTime WorkdayStartTime, double NoOfDays)
         {
+            DateTime GetFinishingDate;
             if (NoOfDays > 0)
             {
                 DateTime EndDate = WorkdayStartTime.AddDays(ConvertPositiveToDays(NoOfDays));
-                DateTime EndDateTime = EndDate.Add(ConvertPositiveToTime(NoOfDays));
+                GetFinishingDate = EndDate.Add(ConvertPositiveToTime(NoOfDays));
+              
             }
             else
             {
                 DateTime EndDate = WorkdayStartTime.AddDays(-1 * ConvertNegativeToDays(NoOfDays));
-                DateTime EndDateTime = EndDate.Subtract(ConvertNegativeTime(NoOfDays));
+                GetFinishingDate = EndDate.Subtract(ConvertNegativeTime(NoOfDays));
             }
+            return GetNextWorkingDay(GetFinishingDate);
         }
+
 
 
 
